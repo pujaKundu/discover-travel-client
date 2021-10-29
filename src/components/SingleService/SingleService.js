@@ -9,7 +9,7 @@ import { useHistory } from "react-router";
 const dollar = <FontAwesomeIcon icon={faDollarSign} />;
 
 const SingleService = (props) => {
-  const { key, name, description, url, price } = props.service || {};
+  const { _id, name, description, url, price } = props.service || {};
   const history = useHistory();
   const [singleService, setSingleService] = useState([]);
   useEffect(() => {
@@ -22,8 +22,8 @@ const SingleService = (props) => {
   }, []);
 
   //explore now button handler
-  const handleExploreBtn = (key) => {
-    const url = `/seviceDetail/${key}`;
+  const handleExploreBtn = (id) => {
+    const url = `/seviceDetail/${id}`;
     history.push(url);
   };
   return (
@@ -42,7 +42,7 @@ const SingleService = (props) => {
           <hr />
           <Card.Text>{description}</Card.Text>
           <Button
-            onClick={() => handleExploreBtn(key)}
+            onClick={() => handleExploreBtn(_id)}
             className="btn-decoration"
           >
             Explore now
