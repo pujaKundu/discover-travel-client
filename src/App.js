@@ -9,6 +9,7 @@ import NotFound from "./components/NotFound/NotFound";
 import AuthProvider from "./Context/AuthProvider";
 import Services from "./components/Services/Services";
 import ServiceDetail from "./components/ServiceDetail/ServiceDetail";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 function App() {
   return (
@@ -29,9 +30,9 @@ function App() {
             <Route exact path="/services">
               <Services></Services>
             </Route>
-            <Route exact path="/seviceDetail/:serviceId">
+            <PrivateRoute exact path="/seviceDetail/:serviceId">
               <ServiceDetail></ServiceDetail>
-            </Route>
+            </PrivateRoute>
             <Route path="*">
               <NotFound></NotFound>
             </Route>
