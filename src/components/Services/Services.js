@@ -24,7 +24,7 @@ const Services = () => {
     <Container>
       <p className="mt-5 mb-2 title">DON’T MISS</p>
       <h1 className="display-3  title">Our Offers</h1>
-      <p className="mt-2 mb-5 title">
+      <p className="mt-2 mb-5 text-muted">
         Somewhere something amazing is waiting to be known
       </p>
       {isLoading && (
