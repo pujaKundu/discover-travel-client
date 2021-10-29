@@ -6,7 +6,7 @@ import "./Banner.css";
 const Banner = () => {
   return (
     <Container
-      className=" d-flex flex-column aign-items-center justify-content-center"
+      className=" d-flex flex-column align-items-center justify-content-center"
       fluid
       style={{
         backgroundImage: `url(${banner})`,
