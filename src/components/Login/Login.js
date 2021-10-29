@@ -1,16 +1,30 @@
 import React from "react";
 import { Button, Container } from "react-bootstrap";
+import { useHistory, useLocation } from "react-router";
 import useAuth from "../../Hooks/useAuth";
 import googleIcon from "../../images/icon/google icon.png";
 import loginImg from "../../images/log-2.jpg";
 import "./Login.css";
 const Login = () => {
-  const { user, setUser, signInUsingGoogle } = useAuth();
+  const { setUser, signInUsingGoogle, setIsLoading } = useAuth();
+
+  const history = useHistory();
+  const location = useLocation();
+
+  const url = location.state?.from || "/home";
+
   const handleGoogleSignIn = () => {
-    signInUsingGoogle().then((res) => {
-      console.log(res.user);
-      setUser(res.user);
-    });
+    signInUsingGoogle()
+      .then((res) => {
+        console.log(res.user);
+        setUser(res.user);
+        setIsLoading(true);
+        history.push(url);
+      })
+      .catch((err) => console.log(err))
+      .finally(() => {
+        setIsLoading(false);
+      });
   };
   return (
     <Container
