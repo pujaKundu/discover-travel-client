@@ -14,10 +14,10 @@ const Banner = () => {
         height: "100vh",
       }}
     >
-      <h1 className="display-2 banner-text">
+      <h1 className="display-2 banner-text animate__animated animate__fadeInDown">
         Discover the most amazing places
       </h1>
-      <h3 className="text-white sub-text">
+      <h3 className="text-white sub-text animate__animated animate__fadeInUp">
         Best places for your next travel are here check them out
       </h3>
     </Container>

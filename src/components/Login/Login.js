@@ -3,7 +3,7 @@ import { Button, Container } from "react-bootstrap";
 import { useHistory, useLocation } from "react-router";
 import useAuth from "../../Hooks/useAuth";
 import googleIcon from "../../images/icon/google icon.png";
-import loginImg from "../../images/log-2.jpg";
+import loginImg from "../../images/Login/log.jpg";
 import "./Login.css";
 const Login = () => {
   const { setUser, signInUsingGoogle, setIsLoading } = useAuth();
@@ -29,16 +29,16 @@ const Login = () => {
   return (
     <Container
       fluid
-      className="d-flex flex-column align-items-center justify-content-center border p-5"
+      className="d-flex flex-column align-items-center justify-content-center border p-5 "
       style={{
         backgroundImage: `url(${loginImg})`,
         backgroundSize: "cover",
         height: "100vh",
       }}
     >
-      <div className="d-flex flex-column align-items-center justify-content-center border border-success shadow-lg rounded bg-login">
+      <div className="d-flex flex-column align-items-center justify-content-center border border-dark rounded py-4">
         <h1 className="text-color mt-3">Login</h1>
-        <Button onClick={handleGoogleSignIn} className="m-4" bg="light">
+        <Button onClick={handleGoogleSignIn} className="m-4 btn-color border-0">
           <img
             src={googleIcon}
             className="me-2"

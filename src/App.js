@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./App.css";
+import "animate.css";
 import Homepage from "./components/Home/Homepage/Homepage";
 import Login from "./components/Login/Login";
 import Footer from "./components/shared/Footer/Footer";

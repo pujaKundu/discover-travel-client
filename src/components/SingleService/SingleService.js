@@ -28,11 +28,11 @@ const SingleService = (props) => {
   };
   return (
     <Col>
-      <Card className="h-100 rounded ">
+      <Card className="h-100 single-card" style={{ borderRadius: "8%" }}>
         <Card.Img
           variant="top"
           src={url}
-          className="img-fluid w-75 mx-auto mt-3"
+          className="img-fluid  mx-auto card-img"
         />
         <Card.Body className="text-left ps-4 card-bg">
           <Card.Title className="fw-bold">{name}</Card.Title>
