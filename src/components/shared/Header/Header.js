@@ -30,12 +30,14 @@ const Header = () => {
                 Home
               </Nav.Link>
               {user.email && (
-                <div className="d-flex">
-                  <Nav.Link className="text-white" as={Link} to="/myOrders">
-                    My Bookings
-                  </Nav.Link>
+                <Nav.Link className="text-white" as={Link} to="/myOrders">
+                  My Bookings
+                </Nav.Link>
+              )}
+              {user.email && (
+                <div className="">
                   <NavDropdown
-                    style={{ backgroundColor: "#344e41", color: "#d4d3cf" }}
+                    className="btn-light rounded fs-6"
                     title="Dashboard"
                     id="basic-nav-dropdown"
                   >

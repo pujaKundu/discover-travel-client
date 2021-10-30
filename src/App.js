@@ -15,6 +15,7 @@ import MyOrders from "./components/MyOrders/MyOrders";
 import ManageAllOrders from "./components/ManageAllOrders/ManageAllOrders";
 import AddService from "./components/AddService/AddService";
 import Dashboard from "./components/Dashboard/Dashboard";
+import AddOrder from "./components/AddOrder/AddOrder";
 
 function App() {
   return (
@@ -47,8 +48,13 @@ function App() {
             <Route exact path="/userOrders">
               <MyOrders></MyOrders>
             </Route>
-
             <Route path="/myOrders">
+              <MyOrders></MyOrders>
+            </Route>
+            <Route path="/orders">
+              <AddOrder></AddOrder>
+            </Route>
+            <Route path="/orders">
               <MyOrders></MyOrders>
             </Route>
             <Route exact path="/manageOrders">

@@ -8,11 +8,13 @@ const AddOrder = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    axios.post("http://localhost:5000/orders", data).then((res) => {
-      console.log(res);
-      alert("Task added successfully");
-      reset();
-    });
+    axios
+      .post("https://limitless-inlet-52700.herokuapp.com/orders", data)
+      .then((res) => {
+        console.log(res);
+        alert("Task added successfully");
+        reset();
+      });
   };
   return (
     <div>
@@ -36,6 +38,12 @@ const AddOrder = () => {
         <input
           className="my-2 w-50"
           placeholder="Enter Destination"
+          required
+          {...register("destination")}
+        />
+        <input
+          className="my-2 w-50"
+          placeholder="Enter Address"
           required
           {...register("address")}
         />

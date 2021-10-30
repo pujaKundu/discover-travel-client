@@ -42,11 +42,33 @@ const MyOrders = () => {
       <h1>My Bookings:{bookings.length}</h1>
       <div className="d-flex flex-column align-items-center justify-content-center">
         {bookings.map((booking) => (
-          <div key={booking._id} className="my-3 order-card">
-            <h1>{booking.address}</h1>
-            <p>{booking.date}</p>
-            <p>{booking.name}</p>
-            <p>{booking.email}</p>
+          <div
+            key={booking._id}
+            className="my-3"
+            style={{
+              backgroundColor: "#d4d3cf",
+              padding: "2% 6%",
+              textAlign: "left",
+            }}
+          >
+            <h2>{booking?.destination}</h2>
+            <p>
+              <span className="fw-bold fs-6">Date: </span>
+              {booking?.date}
+            </p>
+            <p>
+              <span className="fw-bold fs-6">Booked By: </span>
+              {booking?.name}
+            </p>
+            <p>
+              <span className="fw-bold fs-6">Email:</span>
+              {booking?.email}
+            </p>
+            <p>
+              <span className="fw-bold fs-6">Address:</span>
+              {booking?.address}
+            </p>
+
             <button
               onClick={() => handleCancelBooking(booking._id)}
               className="btn btn-danger"
