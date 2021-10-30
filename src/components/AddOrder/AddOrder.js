@@ -5,12 +5,13 @@ import useAuth from "../../Hooks/useAuth";
 
 const AddOrder = () => {
   const { user } = useAuth();
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     console.log(data);
     axios.post("http://localhost:5000/orders", data).then((res) => {
       console.log(res);
       alert("Task added successfully");
+      reset();
     });
   };
   return (
@@ -34,7 +35,7 @@ const AddOrder = () => {
         />
         <input
           className="my-2 w-50"
-          placeholder="Enter Address"
+          placeholder="Enter Destination"
           required
           {...register("address")}
         />

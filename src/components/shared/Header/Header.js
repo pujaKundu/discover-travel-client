@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Container, Nav, Button } from "react-bootstrap";
+import { Navbar, Container, Nav, Button, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
 import logo from "../../../images/mountain-travel-man-retro-emblem-man-mountain-peak-logo_1284-53130.jpg";
@@ -34,12 +34,25 @@ const Header = () => {
                   <Nav.Link className="text-white" as={Link} to="/myOrders">
                     My Bookings
                   </Nav.Link>
-                  <Nav.Link className="text-white" as={Link} to="/manageOrders">
+                  <NavDropdown
+                    style={{ backgroundColor: "#344e41", color: "#d4d3cf" }}
+                    title="Dashboard"
+                    id="basic-nav-dropdown"
+                  >
+                    <NavDropdown.Item as={Link} to="/manageOrders">
+                      Manage Bookings
+                    </NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/addService">
+                      Add Destination
+                    </NavDropdown.Item>
+                  </NavDropdown>
+
+                  {/* <Nav.Link className="text-white" as={Link} to="/manageOrders">
                     Manage Bookings
                   </Nav.Link>
                   <Nav.Link className="text-white" as={Link} to="/addService">
                     Add Service
-                  </Nav.Link>
+                  </Nav.Link> */}
                 </div>
               )}
               {user.email && (

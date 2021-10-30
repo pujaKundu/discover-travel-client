@@ -1,0 +1,10 @@
+.order-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.order-card {
+  color: #344e41;
+  background-color: #d4d3cf;
+  padding: 2% 5%;
+}

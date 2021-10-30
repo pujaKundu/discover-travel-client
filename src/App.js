@@ -14,6 +14,7 @@ import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import MyOrders from "./components/MyOrders/MyOrders";
 import ManageAllOrders from "./components/ManageAllOrders/ManageAllOrders";
 import AddService from "./components/AddService/AddService";
+import Dashboard from "./components/Dashboard/Dashboard";
 
 function App() {
   return (
@@ -31,13 +32,23 @@ function App() {
             <Route exact path="/login">
               <Login></Login>
             </Route>
+            <Route path="/dashboard">
+              <Dashboard></Dashboard>
+            </Route>
             <Route exact path="/services">
               <Services></Services>
             </Route>
             <PrivateRoute exact path="/seviceDetail/:id">
               <ServiceDetail></ServiceDetail>
             </PrivateRoute>
-            <Route exact path="/orders">
+            <Route exact path="/userOrders/:id">
+              <MyOrders></MyOrders>
+            </Route>
+            <Route exact path="/userOrders">
+              <MyOrders></MyOrders>
+            </Route>
+
+            <Route path="/myOrders">
               <MyOrders></MyOrders>
             </Route>
             <Route exact path="/manageOrders">
