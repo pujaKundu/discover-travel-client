@@ -1,0 +1,17 @@
+.popular-tours-container {
+  background-color: #344e41;
+  color: rgb(171, 184, 155);
+  margin-top: 100px;
+}
+.tour-images img:hover {
+  filter: grayscale(100);
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.bg-color {
+  background-color: #344e41;
+}

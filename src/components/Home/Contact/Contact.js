@@ -4,18 +4,20 @@ import "./Contact.css";
 
 const Contact = () => {
   return (
-    <Container className="mt-5">
+    <Container className="my-5">
       <div className="my-5 text-uppercase text-color">
         <p>Why Contact Us?</p>
         <h1 className="display-3">We are best in our field</h1>
         <p className="text-muted mt-2">
-          You can rest assured we’ll have the capacity to make you feel
-          comfortable as we leave <br /> the techy stuff and we focus on helping
-          people.
+          <small>
+            You can rest assured we’ll have the capacity to make you feel
+            comfortable as we leave <br /> the techy stuff and we focus on
+            helping people.
+          </small>
         </p>
       </div>
       <CardGroup>
-        <Card className="border-0">
+        <Card className="border-0 me-2 card">
           <Card.Img
             className="p-5"
             variant="top"
@@ -28,7 +30,7 @@ const Contact = () => {
             <Card.Text>You can go anywhere around the world.</Card.Text>
           </Card.Body>
         </Card>
-        <Card className="border-0">
+        <Card className="border-0 me-2 card">
           <Card.Img
             className="p-5"
             variant="top"
@@ -41,7 +43,7 @@ const Contact = () => {
             <Card.Text>Journey will be comfortable. </Card.Text>
           </Card.Body>
         </Card>
-        <Card className="border-0">
+        <Card className="border-0 me-2 card">
           <Card.Img
             className="p-5"
             variant="top"
@@ -54,7 +56,7 @@ const Contact = () => {
             <Card.Text>Every action is handled legally.</Card.Text>
           </Card.Body>
         </Card>
-        <Card className="border-0">
+        <Card className="border-0 me-2 card">
           <Card.Img
             className="p-5 border-right"
             variant="top"

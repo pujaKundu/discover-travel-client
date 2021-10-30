@@ -28,7 +28,10 @@ const SingleService = (props) => {
   };
   return (
     <Col>
-      <Card className="h-100 single-card" style={{ borderRadius: "8%" }}>
+      <Card
+        className="h-100 single-card"
+        style={{ borderRadius: "8%", margin: "6%" }}
+      >
         <Card.Img
           variant="top"
           src={url}

@@ -21,7 +21,7 @@ const Header = () => {
               className="d-inline-block align-top rounded"
             />{" "}
             <span className="name-color">Discover</span>{" "}
-            <span className="text-gray">Travel</span>
+            <span className="text-gray">Travels</span>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
