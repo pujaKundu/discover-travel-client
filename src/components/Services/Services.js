@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { CardGroup, Container, Row, Spinner } from "react-bootstrap";
-import useAuth from "../../Hooks/useAuth";
+import { Container, Row, Spinner } from "react-bootstrap";
+
 import SingleService from "../SingleService/SingleService";
 import "./Services.css";
 
@@ -15,9 +15,6 @@ const Services = () => {
         setServices(data);
         setIsLoading(false);
       });
-    // .finally(() => {
-    //   setIsLoading(false);
-    // });
   }, []);
 
   return (

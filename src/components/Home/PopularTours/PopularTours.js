@@ -28,7 +28,7 @@ const PopularTours = () => {
           </p>
         </Col>
       </Row>
-      <Row md={4} xs={1} className="my-3 pb-5 tour-images">
+      <Row md={4} xs={1} className="my-3 pb-5 tour-images px-5">
         <Col>
           <img className="rounded shadow-lg my-2" src={paris} alt="" />
         </Col>

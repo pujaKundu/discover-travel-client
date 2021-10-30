@@ -1,10 +1,12 @@
 import React from "react";
+import { Container } from "react-bootstrap";
+import error from "../../images/404.jpg";
 
 const NotFound = () => {
   return (
-    <div>
-      <h1>404 Page not found</h1>
-    </div>
+    <Container fluid>
+      <img src={error} alt="" />
+    </Container>
   );
 };
 

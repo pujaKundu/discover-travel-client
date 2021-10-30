@@ -48,7 +48,7 @@ const SingleService = (props) => {
             onClick={() => handleExploreBtn(_id)}
             className="btn-decoration"
           >
-            Explore now
+            Book now
           </Button>
         </Card.Body>
       </Card>

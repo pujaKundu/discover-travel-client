@@ -30,17 +30,30 @@ const Header = () => {
                 Home
               </Nav.Link>
               {user.email && (
+                <div className="d-flex">
+                  <Nav.Link className="text-white" as={Link} to="/myOrders">
+                    My Bookings
+                  </Nav.Link>
+                  <Nav.Link className="text-white" as={Link} to="/manageOrders">
+                    Manage Bookings
+                  </Nav.Link>
+                  <Nav.Link className="text-white" as={Link} to="/addService">
+                    Add Service
+                  </Nav.Link>
+                </div>
+              )}
+              {user.email && (
                 <div>
+                  <span className="text-light mx-2 text-uppercase">
+                    {user.displayName}{" "}
+                  </span>
                   <img
                     src={user.photoURL}
                     width="40"
                     height="40"
-                    className="rounded-circle ms-2"
+                    className="rounded-circle mx-2"
                     alt=""
                   />
-                  <span className="text-light mx-2 text-uppercase">
-                    {user.displayName}{" "}
-                  </span>
                 </div>
               )}
               {user.email ? (
