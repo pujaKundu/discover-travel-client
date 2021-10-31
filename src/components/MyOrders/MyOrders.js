@@ -76,7 +76,7 @@ const MyOrders = () => {
                 {booking?.address}
               </p>
               <p>
-                <span className="fw-bold fs-6">State:</span>
+                <span className="fw-bold fs-6 text-uppercase">State:</span>
                 {booking?.state}
               </p>
 

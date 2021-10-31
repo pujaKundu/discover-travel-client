@@ -78,8 +78,7 @@ const SingleOrder = (props) => {
 
                   {booking?.date}
                   <br />
-
-                  {booking?.state}
+                  <span className="text-uppercase">{booking?.state}</span>
                 </td>
 
                 <td className="pt-4">
@@ -101,64 +100,9 @@ const SingleOrder = (props) => {
               </tr>
             </tbody>
           </Table>
-
-          // <div
-          //   key={booking._id}
-          //   className="my-3 d-flex "
-          //   style={{
-          //     backgroundColor: "#d4d3cf",
-          //     padding: "2% 6%",
-          //     textAlign: "left",
-          //   }}
-          // >
-          //   <h2 className="px-4 border border-right">{booking?.destination}</h2>
-          //   <p className="px-4 border border-right">
-          //     <span className="fw-bold fs-6">Date: </span>
-          //     {booking?.date}
-          //   </p>
-          //   <p>
-          //     <span className="fw-bold fs-6">Booked By: </span>
-          //     {booking?.name}
-          //   </p>
-          //   <p>
-          //     <span className="fw-bold fs-6">Email:</span>
-          //     {booking?.email}
-          //   </p>
-          //   <p>
-          //     <span className="fw-bold fs-6">Address:</span>
-          //     {booking?.address}
-          //   </p>
-
-          //   <button
-          //     onClick={() => handleCancelBooking(booking._id)}
-          //     className="btn btn-danger"
-          //   >
-          //     Cancel
-          //   </button>
-          // </div>
         ))}
       </div>
     </div>
-    // <Col>
-    //   <Card className="h-100" style={{ borderRadius: "8%", margin: "6%" }}>
-    //     <Card.Body className="text-left ps-4">
-    //       <Card.Title className="fw-bold">{destination}</Card.Title>
-    //       <Card.Text>
-    //         Date: {date}
-    //         <br />
-    //         Location: {address}
-    //         <br />
-    //         Booked By: {name}
-    //         <hr />
-    //         <br />
-    //         Email: {email}
-    //       </Card.Text>
-    //       <Button onClick={() => handleCancelBooking(_id)} variant="danger">
-    //         Cancel
-    //       </Button>
-    //     </Card.Body>
-    //   </Card>
-    // </Col>
   );
 };
 
