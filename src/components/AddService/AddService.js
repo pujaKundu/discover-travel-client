@@ -24,7 +24,7 @@ const AddService = () => {
       className="py-5"
       style={{ backgroundColor: "#d4d3cf", color: "#344e41" }}
     >
-      <h1 className="pt-5">Add New Destination</h1>
+      <h1 className="pt-5 display-4">Add New Destination</h1>
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="d-flex flex-column align-items-center justify-content-center my-5"
@@ -34,14 +34,14 @@ const AddService = () => {
         </label>
         <input
           {...register("name", { required: true, maxLength: 20 })}
-          className="my-2 w-50"
+          className="my-2 w-50  rounded border-0 p-2"
           placeholder="Destination"
         />
         <label className="text-left fs-4" htmlFor="">
           Add Description
         </label>
         <textarea
-          className="my-2 w-50"
+          className="my-2 w-50 rounded border-0 p-2"
           {...register("description")}
           placeholder="Description"
         />
@@ -49,7 +49,7 @@ const AddService = () => {
           Add Price
         </label>
         <input
-          className="my-2 w-50"
+          className="my-2 w-50 rounded border-0 p-2"
           {...register("price")}
           required
           placeholder="Price"
@@ -59,7 +59,7 @@ const AddService = () => {
           Add Image Url
         </label>
         <input
-          className="my-2 w-50"
+          className="my-2 w-50 rounded border-0 p-2"
           {...register("url")}
           required
           placeholder="Image Url"
@@ -68,7 +68,7 @@ const AddService = () => {
           Add Duration
         </label>
         <input
-          className="my-2 w-50"
+          className="my-2 w-50 rounded border-0 p-2"
           {...register("duration")}
           required
           placeholder="Duration"
@@ -77,7 +77,7 @@ const AddService = () => {
           Add Maximum People
         </label>
         <input
-          className="my-2 w-50"
+          className="my-2 w-50 rounded border-0 p-2"
           {...register("maxPeople")}
           required
           placeholder="Maximum no. of People"
@@ -86,22 +86,22 @@ const AddService = () => {
           Add Minimum Age
         </label>
         <input
-          className="my-2 w-50"
+          className="my-2 w-50 rounded border-0 p-2"
           {...register("Minimum Age")}
           required
           placeholder="Destination"
         />
         <label className="text-left fs-4" htmlFor="">
-          Add Tour Type
+          Add Trip Type
         </label>
         <input
-          className="my-2 w-50"
+          className="my-2 w-50 rounded border-0 p-2"
           {...register("type")}
           required
           placeholder="Type"
         />
         <input
-          className="btn"
+          className="btn rounded-pill px-5 py-3 mt-4"
           style={{ backgroundColor: "#344e41", color: "#d4d3cf" }}
           type="submit"
         />

@@ -17,16 +17,15 @@ const ManageAllOrders = () => {
 
   return (
     <Container className="my-5">
-      <h1 className="display-3  title">Manage your orders here</h1>
+      <h1 className="display-3 py-3" style={{ color: "#344e41" }}>
+        Manage your orders here:{bookings.length}
+      </h1>
 
       {isLoading && (
         <Spinner animation="border" className="my-5" variant="dark" />
       )}
-      <Row xs={1} md={3} className="g-4">
-        {bookings.map((booking) => (
-          <SingleOrder key={booking._id} booking={booking}></SingleOrder>
-        ))}
-      </Row>
+
+      <SingleOrder></SingleOrder>
     </Container>
   );
 };

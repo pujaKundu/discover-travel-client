@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Col, Card, Button } from "react-bootstrap";
+import { Col, Card, Button, Table } from "react-bootstrap";
 
 const SingleOrder = (props) => {
   const [bookings, setBookings] = useState([]);
@@ -36,40 +36,73 @@ const SingleOrder = (props) => {
     <div>
       <div className="d-flex flex-column align-items-center justify-content-center">
         {bookings.map((booking) => (
-          <div
-            key={booking._id}
-            className="my-3"
-            style={{
-              backgroundColor: "#d4d3cf",
-              padding: "2% 6%",
-              textAlign: "left",
-            }}
-          >
-            <h2>{booking?.destination}</h2>
-            <p>
-              <span className="fw-bold fs-6">Date: </span>
-              {booking?.date}
-            </p>
-            <p>
-              <span className="fw-bold fs-6">Booked By: </span>
-              {booking?.name}
-            </p>
-            <p>
-              <span className="fw-bold fs-6">Email:</span>
-              {booking?.email}
-            </p>
-            <p>
-              <span className="fw-bold fs-6">Address:</span>
-              {booking?.address}
-            </p>
+          <Table striped bordered hover size="sm" className="table-responsive">
+            <thead style={{ backgroundColor: "#344e41", color: "#d4d3cf" }}>
+              <tr>
+                <th>Destination</th>
+                <th>Booking Detail</th>
+                <th>Manage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="pt-4">{booking?.destination}</td>
+                <td>
+                  {booking?.name}
+                  <br />
 
-            <button
-              onClick={() => handleCancelBooking(booking._id)}
-              className="btn btn-danger"
-            >
-              Cancel
-            </button>
-          </div>
+                  {booking?.email}
+                  <br />
+
+                  {booking?.date}
+                </td>
+
+                <td className="pt-4">
+                  <Button
+                    onClick={() => handleCancelBooking(booking._id)}
+                    variant="danger"
+                  >
+                    Cancel
+                  </Button>
+                </td>
+              </tr>
+            </tbody>
+          </Table>
+
+          // <div
+          //   key={booking._id}
+          //   className="my-3 d-flex "
+          //   style={{
+          //     backgroundColor: "#d4d3cf",
+          //     padding: "2% 6%",
+          //     textAlign: "left",
+          //   }}
+          // >
+          //   <h2 className="px-4 border border-right">{booking?.destination}</h2>
+          //   <p className="px-4 border border-right">
+          //     <span className="fw-bold fs-6">Date: </span>
+          //     {booking?.date}
+          //   </p>
+          //   <p>
+          //     <span className="fw-bold fs-6">Booked By: </span>
+          //     {booking?.name}
+          //   </p>
+          //   <p>
+          //     <span className="fw-bold fs-6">Email:</span>
+          //     {booking?.email}
+          //   </p>
+          //   <p>
+          //     <span className="fw-bold fs-6">Address:</span>
+          //     {booking?.address}
+          //   </p>
+
+          //   <button
+          //     onClick={() => handleCancelBooking(booking._id)}
+          //     className="btn btn-danger"
+          //   >
+          //     Cancel
+          //   </button>
+          // </div>
         ))}
       </div>
     </div>
