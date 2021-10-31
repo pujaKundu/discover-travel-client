@@ -7,8 +7,8 @@ This website has been developed with ReactJS ,Firebase, React Router,NodeJS, Exp
 
 ## Features
 
--- The website is responsive
--- User can visit special trip offers
--- User can book trip and see his/her bookings
--- User can also manage bookings and add new destination
--- User will have to login to access special functionalities
+- The website is responsive
+- User can visit special trip offers
+- User can book trip and see his/her bookings
+- User can also manage bookings and add new destination
+- User will have to login to access special functionalities
