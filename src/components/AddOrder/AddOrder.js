@@ -12,7 +12,7 @@ const AddOrder = () => {
       .post("https://limitless-inlet-52700.herokuapp.com/orders", data)
       .then((res) => {
         console.log(res);
-        alert("Task added successfully");
+        alert("Booking completed successfully");
         reset();
       });
   };

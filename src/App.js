@@ -57,6 +57,12 @@ function App() {
             <Route path="/orders">
               <MyOrders></MyOrders>
             </Route>
+            <Route path="/destinations">
+              <Services></Services>
+            </Route>
+            <Route path="/destinations">
+              <AddService></AddService>
+            </Route>
             <Route exact path="/manageOrders">
               <ManageAllOrders></ManageAllOrders>
             </Route>
