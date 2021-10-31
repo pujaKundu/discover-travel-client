@@ -2,8 +2,11 @@ import React from "react";
 import { Navbar, Container, Nav, Button, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import logo from "../../../images/mountain-travel-man-retro-emblem-man-mountain-peak-logo_1284-53130.jpg";
 import "./Header.css";
+import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   const { user, logout } = useAuth();
@@ -73,7 +76,7 @@ const Header = () => {
               )}
               {user.email ? (
                 <Button onClick={logout} variant="light">
-                  Log out
+                  <FontAwesomeIcon icon={faSignOutAlt} /> Log out
                 </Button>
               ) : (
                 <Nav.Link className="text-white" as={Link} to="/login">

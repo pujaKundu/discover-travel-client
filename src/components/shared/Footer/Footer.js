@@ -3,7 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import logo from "../../../images/mountain-travel-man-retro-emblem-man-mountain-peak-logo_1284-53130.jpg";
 import payment from "../../../images/pay.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationArrow } from "@fortawesome/free-solid-svg-icons";
+import { faMapMarked } from "@fortawesome/free-solid-svg-icons";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faCopyright } from "@fortawesome/free-solid-svg-icons";
@@ -13,7 +13,7 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 
-const location = <FontAwesomeIcon icon={faLocationArrow} />;
+const location = <FontAwesomeIcon icon={faMapMarked} />;
 const phone = <FontAwesomeIcon icon={faPhone} />;
 const envelop = <FontAwesomeIcon icon={faEnvelope} />;
 const copyright = <FontAwesomeIcon icon={faCopyright} />;
