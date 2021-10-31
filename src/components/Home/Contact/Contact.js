@@ -34,19 +34,6 @@ const Contact = () => {
           <Card.Img
             className="p-5"
             variant="top"
-            src="https://image.flaticon.com/icons/png/512/1245/1245101.png"
-          />
-          <Card.Body>
-            <Card.Title className="text-color card-heading">
-              We Move Fast and Safe
-            </Card.Title>
-            <Card.Text>Journey will be comfortable. </Card.Text>
-          </Card.Body>
-        </Card>
-        <Card className="border-0 me-2 card">
-          <Card.Img
-            className="p-5"
-            variant="top"
             src="https://image.flaticon.com/icons/png/512/1203/1203407.png"
           />
           <Card.Body>
@@ -56,6 +43,20 @@ const Contact = () => {
             <Card.Text>Every action is handled legally.</Card.Text>
           </Card.Body>
         </Card>
+        <Card className="border-0 me-2 card">
+          <Card.Img
+            className="p-5"
+            variant="top"
+            src="https://image.flaticon.com/icons/png/512/1245/1245101.png"
+          />
+          <Card.Body>
+            <Card.Title className="text-color card-heading">
+              We Move Fast and Safe
+            </Card.Title>
+            <Card.Text>Journey will be comfortable. </Card.Text>
+          </Card.Body>
+        </Card>
+
         <Card className="border-0 me-2 card">
           <Card.Img
             className="p-5 border-right"

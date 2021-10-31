@@ -1,11 +1,15 @@
 import axios from "axios";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import useAuth from "../../Hooks/useAuth";
+import { useParams } from "react-router";
 
 const AddOrder = () => {
+  const { id } = useParams();
   const { user } = useAuth();
   const { register, handleSubmit, reset } = useForm();
+  const [isUpdate, setIsUpdated] = useState(null);
+
   const onSubmit = (data) => {
     console.log(data);
     axios
@@ -53,12 +57,13 @@ const AddOrder = () => {
         />
 
         <input
-          className="my-2 w-75 roundedborder-0 p-2"
+          className="my-2 w-75 rounded border-0 p-2"
           placeholder="Enter Date"
           required
           type="date"
           {...register("date")}
         />
+        <input defaultValue="pending" type="hidden" {...register("state")} />
         <input
           className="px-5 py-2 mt-3 border-0 rounded-pill"
           style={{ backgroundColor: "rgb(190, 241, 112)" }}

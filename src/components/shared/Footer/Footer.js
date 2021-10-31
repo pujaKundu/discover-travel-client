@@ -64,9 +64,14 @@ const Footer = () => {
           <img className="rounded" src={payment} alt="" />
         </Col>
       </Row>
-      <p className="text-center py-4" style={{ color: "#d4d3cf" }}>
-        {copyright} All rights reserved by Discover Travels,2021
-      </p>
+      <Row>
+        <p
+          className="text-center py-4"
+          style={{ color: "#d4d3cf", textAlign: "center" }}
+        >
+          {copyright} All rights reserved by Discover Travels,2021
+        </p>
+      </Row>
     </Container>
   );
 };

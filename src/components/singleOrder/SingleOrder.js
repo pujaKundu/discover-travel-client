@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Col, Card, Button, Table } from "react-bootstrap";
+import { useParams } from "react-router";
 
 const SingleOrder = (props) => {
   const [bookings, setBookings] = useState([]);
+  const [order, setOrder] = useState({});
   const { name, address, email, date, destination, _id } = props.booking || {};
   useEffect(() => {
     fetch("https://limitless-inlet-52700.herokuapp.com/userOrders")
@@ -32,6 +34,26 @@ const SingleOrder = (props) => {
         });
     }
   };
+
+  const handleUpdateBooking = (id) => {
+    fetch(`https://limitless-inlet-52700.herokuapp.com/userOrders/${id}`, {
+      method: "PUT",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(order),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        console.log(result);
+        if (result.modifiedCount) {
+          alert("updated");
+          // console.log(order);
+          order.state = "Approved";
+        } else {
+          alert("Not updated");
+        }
+        //setBookings(order);
+      });
+  };
   return (
     <div>
       <div className="d-flex flex-column align-items-center justify-content-center">
@@ -55,14 +77,25 @@ const SingleOrder = (props) => {
                   <br />
 
                   {booking?.date}
+                  <br />
+
+                  {booking?.state}
                 </td>
 
                 <td className="pt-4">
                   <Button
+                    className="mb-2"
                     onClick={() => handleCancelBooking(booking._id)}
                     variant="danger"
                   >
                     Cancel
+                  </Button>
+                  <br />
+                  <Button
+                    onClick={() => handleUpdateBooking(booking._id)}
+                    variant="success"
+                  >
+                    Approve
                   </Button>
                 </td>
               </tr>

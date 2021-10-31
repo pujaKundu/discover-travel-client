@@ -75,6 +75,10 @@ const MyOrders = () => {
                 <span className="fw-bold fs-6">Address:</span>
                 {booking?.address}
               </p>
+              <p>
+                <span className="fw-bold fs-6">State:</span>
+                {booking?.state}
+              </p>
 
               <button
                 onClick={() => handleCancelBooking(booking._id)}
