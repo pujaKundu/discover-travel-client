@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Col, Card, Button, Table } from "react-bootstrap";
-import { useParams } from "react-router";
+import { Button, Table } from "react-bootstrap";
 
-const SingleOrder = (props) => {
+const SingleOrder = () => {
   const [bookings, setBookings] = useState([]);
   const [order, setOrder] = useState({});
-  const { name, address, email, date, destination, _id } = props.booking || {};
+  //const { name, address, email, date, destination, _id } = props.booking || {};
   useEffect(() => {
     fetch("https://limitless-inlet-52700.herokuapp.com/userOrders")
       .then((res) => res.json())
@@ -39,15 +38,19 @@ const SingleOrder = (props) => {
     fetch(`https://limitless-inlet-52700.herokuapp.com/userOrders/${id}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify(order),
+      body: JSON.stringify(bookings),
     })
       .then((res) => res.json())
       .then((result) => {
         console.log(result);
         if (result.modifiedCount) {
-          alert("updated");
-          // console.log(order);
-          order.state = "Approved";
+          alert("Updated");
+
+          // order.state = "Approved";
+          // bookings.map((booking) => {
+          //   console.log(booking);
+          //   booking.state = "Approved";
+          // });
         } else {
           alert("Not updated");
         }

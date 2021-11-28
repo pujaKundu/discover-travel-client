@@ -2,13 +2,17 @@
 
 Visit Live Site [Discover Travels](https://discover-travel-da5a1.web.app/home).
 
-Discover Travels is a travel agency website. Users can use different functionalities like booking trip etc.
-This website has been developed with ReactJS ,Firebase, React Router,NodeJS, Express , Mongodb, React Bootstrap .
+### Technologies:
 
-## Features
+React JS, React Bootstrap, Firebase, Node.js, Express.js, MongoDB, Heroku.
 
-- The website is responsive
-- User can visit special trip offers
-- User can book trip and see his/her bookings
-- User can also manage bookings and add new destination
-- User will have to login to access special functionalities
+### Description
+
+Discover Travels is a travel agency website with various user functionalities.
+
+### Features :
+
+- A full-stack travel agency website with a dynamic service section.
+- Google sign-in and private routes to access user functionalities.
+- Functionalities include booking trips, canceling an order, adding new trips, and managing all bookings.
+- Responsive user interface.

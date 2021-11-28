@@ -15,7 +15,7 @@ const AddService = () => {
       .post("https://limitless-inlet-52700.herokuapp.com/destinations", data)
       .then((res) => {
         console.log(res);
-        alert("Task added successfully");
+        alert("Destination added successfully");
         reset();
       });
   };
