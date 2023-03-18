@@ -6,7 +6,7 @@ const ManageAllOrders = () => {
   const [bookings, setBookings] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    fetch("https://limitless-inlet-52700.herokuapp.com/userOrders")
+    fetch("https://discover-travel-api.onrender.com/userOrders")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

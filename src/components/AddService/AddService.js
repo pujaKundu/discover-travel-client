@@ -12,7 +12,7 @@ const AddService = () => {
   const onSubmit = (data) => {
     console.log(data);
     axios
-      .post("https://limitless-inlet-52700.herokuapp.com/destinations", data)
+      .post("https://discover-travel-api.onrender.com/destinations", data)
       .then((res) => {
         console.log(res);
         alert("Destination added successfully");

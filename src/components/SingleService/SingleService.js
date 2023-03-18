@@ -13,7 +13,7 @@ const SingleService = (props) => {
   const history = useHistory();
   const [singleService, setSingleService] = useState([]);
   useEffect(() => {
-    fetch("https://limitless-inlet-52700.herokuapp.com/services")
+    fetch("https://discover-travel-api.onrender.com/services")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

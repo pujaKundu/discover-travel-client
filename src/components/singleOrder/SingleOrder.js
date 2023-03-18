@@ -6,7 +6,7 @@ const SingleOrder = () => {
   const [order, setOrder] = useState({});
   //const { name, address, email, date, destination, _id } = props.booking || {};
   useEffect(() => {
-    fetch("https://limitless-inlet-52700.herokuapp.com/userOrders")
+    fetch("https://discover-travel-api.onrender.com/userOrders")
       .then((res) => res.json())
       .then((data) => setBookings(data));
   }, []);
@@ -17,7 +17,7 @@ const SingleOrder = () => {
       "Are you sure , you want to cancel booking?"
     );
     if (proceed) {
-      const url = `https://limitless-inlet-52700.herokuapp.com/userOrders/${id}`;
+      const url = `https://discover-travel-api.onrender.com/userOrders/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -35,7 +35,7 @@ const SingleOrder = () => {
   };
 
   const handleUpdateBooking = (id) => {
-    fetch(`https://limitless-inlet-52700.herokuapp.com/userOrders/${id}`, {
+    fetch(`https://discover-travel-api.onrender.com/userOrders/${id}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(bookings),

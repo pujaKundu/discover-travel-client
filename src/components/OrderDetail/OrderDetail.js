@@ -5,7 +5,7 @@ const OrderDetail = () => {
   const [order, setOrder] = useState([]);
   const { name, address, _id, date, email } = order;
   useEffect(() => {
-    fetch("https://limitless-inlet-52700.herokuapp.com/userOrders")
+    fetch("https://discover-travel-api.onrender.com/userOrders")
       .then((res) => res.json())
       .then((data) => console.log(data));
   }, []);

@@ -13,7 +13,7 @@ const ServiceDetail = () => {
     detail;
   //console.log(id);
   useEffect(() => {
-    fetch(`https://limitless-inlet-52700.herokuapp.com/services/${id}`)
+    fetch(`https://discover-travel-api.onrender.com/services/${id}`)
       .then((res) => res.json())
       .then((data) => setDetail(data));
   }, []);

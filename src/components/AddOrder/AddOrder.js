@@ -13,7 +13,7 @@ const AddOrder = () => {
   const onSubmit = (data) => {
     console.log(data);
     axios
-      .post("https://limitless-inlet-52700.herokuapp.com/orders", data)
+      .post("https://discover-travel-api.onrender.com/orders", data)
       .then((res) => {
         console.log(res);
         alert("Booking completed successfully");

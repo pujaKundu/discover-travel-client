@@ -8,7 +8,7 @@ const Services = () => {
   const [services, setServices] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    fetch("https://limitless-inlet-52700.herokuapp.com/services")
+    fetch("https://discover-travel-api.onrender.com/services")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
