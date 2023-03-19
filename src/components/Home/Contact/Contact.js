@@ -1,6 +1,10 @@
 import React from "react";
 import { Container, CardGroup, Card } from "react-bootstrap";
 import "./Contact.css";
+import world from "../../../images/icon/airplane.gif";
+import passport from "../../../images/icon/passport.gif";
+import travel from "../../../images/icon/travel.gif";
+import hotel from "../../../images/icon/hotel.gif";
 
 const Contact = () => {
   return (
@@ -18,11 +22,7 @@ const Contact = () => {
       </div>
       <CardGroup>
         <Card className="border-0 me-2 card">
-          <Card.Img
-            className="p-5"
-            variant="top"
-            src="https://image.flaticon.com/icons/png/512/1245/1245075.png"
-          />
+          <Card.Img className="p-5" variant="top" src={world} />
           <Card.Body>
             <Card.Title className="text-color card-heading">
               We Work Around the World
@@ -31,11 +31,7 @@ const Contact = () => {
           </Card.Body>
         </Card>
         <Card className="border-0 me-2 card">
-          <Card.Img
-            className="p-5"
-            variant="top"
-            src="https://image.flaticon.com/icons/png/512/1203/1203407.png"
-          />
+          <Card.Img className="p-5" variant="top" src={passport} />
           <Card.Body>
             <Card.Title className="text-color card-heading">
               We Do Everything Legally
@@ -44,11 +40,7 @@ const Contact = () => {
           </Card.Body>
         </Card>
         <Card className="border-0 me-2 card">
-          <Card.Img
-            className="p-5"
-            variant="top"
-            src="https://image.flaticon.com/icons/png/512/1245/1245101.png"
-          />
+          <Card.Img className="p-5" variant="top" src={travel} />
           <Card.Body>
             <Card.Title className="text-color card-heading">
               We Move Fast and Safe
@@ -58,11 +50,7 @@ const Contact = () => {
         </Card>
 
         <Card className="border-0 me-2 card">
-          <Card.Img
-            className="p-5 border-right"
-            variant="top"
-            src="https://image.flaticon.com/icons/png/512/1010/1010285.png"
-          />
+          <Card.Img className="p-5 border-right" variant="top" src={hotel} />
           <Card.Body>
             <Card.Title className="text-color card-heading">
               We Offer The Best Residence

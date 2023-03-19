@@ -35,7 +35,7 @@ const SingleService = (props) => {
         <Card.Img
           variant="top"
           src={url}
-          className="img-fluid  mx-auto card-img"
+          className="img-fluid  mx-auto card-img "
         />
         <Card.Body className="text-left ps-4 card-bg">
           <Card.Title className="fw-bold">{name}</Card.Title>
